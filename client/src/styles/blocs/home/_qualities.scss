@@ -1,0 +1,62 @@
+// QUALITIES
+
+.qualities {
+    background-color: $mandy;
+}
+
+.qualities__list {
+    padding: 7rem 0;
+    font-family: $BlueHightwayCondensed;
+    font-size: 2.5rem;
+    letter-spacing: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+
+    @include maxw($mobile) {
+        display: flex;
+        flex-wrap: wrap;
+
+        padding: 4rem 0;
+        font-size: 2rem;
+    }
+}
+
+.qualities__item {
+    position: relative;
+    display: inline-block;
+    padding: 0 3.5rem;
+
+    @include maxw($tablet) {
+        padding: 0 1.5rem;
+    }
+
+    &:last-child {
+        &::after {
+            content: none;
+        }
+    }
+
+    &::after {
+        content: '/';
+        display: inline-block;
+        position: absolute;
+        right: -0.5rem;
+        top: 0;
+        transform: translateX(50%);
+    }
+
+    @include maxw($tablet) {
+        padding: 0 1.5rem;
+    }
+
+    @include maxw($mobile) {
+        width: 50%;
+
+        @include even() {
+            &::after {
+                content: none;
+            }
+        }
+    }
+}

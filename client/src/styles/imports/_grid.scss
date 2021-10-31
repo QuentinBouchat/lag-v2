@@ -1,0 +1,209 @@
+
+/* GRID & STRUCTURE
+----------------------------------------------------------------------------------------------------*/
+
+/* Variables
+---------------------------------------------------------*/
+
+// Breakpoints
+$xx-wide: 2100px;
+$x-wide: 1921px;
+$wide: 1681px;
+$small: 1350px;
+$x-small: 1200px;
+$tabletL: 1180px;
+$tablet: 1023px;
+$tabletP: 960px;
+$tabletMid: 840px;
+$mobile: 720px;
+$x-mobile: 600px;
+$xx-mobile: 359px;
+
+
+// Desktop
+$col-number: 12;
+$gut-number: $col-number - 1;
+$margin: 7.03125%;
+$margin-alt: 7%;
+$margin-wide: 12%;
+$margin-alt-wide: 10.4%;
+$colW: 6.66%;
+$gutW: ( 100% - ($col-number*$colW) ) / $gut-number;
+
+
+// Mobile
+$margin-mobile: 7%;
+$margin-alt-mobile: 4.6%;
+
+
+// Misc
+$stripe-width: 21.5%;
+$stripe-width-wide: 19.8%;
+$stripe-width-mobile: 22.7%;
+
+
+
+
+/* Grid
+---------------------------------------------------------*/
+
+@for $i from 1 to 13 {
+	$thisWidth: $colW*$i + ($i - 1)*$gutW;
+
+  	.col-#{$i} { width: $thisWidth; }
+
+	.ml-#{$i}  { margin-left: #{$colW*$i + ($i - 1)*$gutW}; }
+	.mlg-#{$i} { margin-left: #{$colW*$i + $i*$gutW}; }
+
+	.mr-#{$i}  { margin-right:  #{$colW*$i + ($i - 1)*$gutW}; }
+	.mrg-#{$i} { margin-right:  #{$colW*$i + $i*$gutW}; }
+
+	.pl-#{$i}  { padding-left:  #{$colW*$i + ($i - 1)*$gutW}; }
+	.plg-#{$i} { padding-left:  #{$colW*$i + $i*$gutW}; }
+
+	.pr-#{$i}  { padding-right: #{$colW*$i + ($i - 1)*$gutW}; }
+	.prg-#{$i} { padding-right: #{$colW*$i + $i*$gutW}; }
+}
+
+
+
+
+/* Container & helpers
+---------------------------------------------------------*/
+
+.ctn {
+	padding-left: $margin;
+	padding-right: $margin;
+
+	@include maxw($tabletP) {
+		padding-left: $margin-mobile;
+		padding-right: $margin-mobile;
+	}
+
+	@include minw($x-wide) {
+		padding-left: $margin-wide;
+		padding-right: $margin-wide;
+	}
+}
+
+.ctn-alt {
+	padding-left: $margin-alt;
+	padding-right: $margin-alt;
+
+	@include minw($x-wide) {
+		padding-left: $margin-alt-wide;
+		padding-right: $margin-alt-wide;
+	}
+
+	@include maxw($tabletP) {
+		padding-left: $margin-alt-mobile;
+		padding-right: $margin-alt-mobile;
+	}
+
+	@include maxw($mobile) {
+		padding-left: $margin-mobile;
+		padding-right: $margin-mobile;
+	}
+}
+
+.fl-l { float: left; }
+.fl-r { float: right; }
+
+.clr { @include clearfix; }
+
+.full-w { width: 100%; }
+
+.ml-m { margin-left: $margin; }
+.mr-m { margin-right: $margin; }
+
+
+
+
+/* Mobile-specific
+---------------------------------------------------------*/
+
+.m-100 {
+	@include maxw($tabletP) {
+		width: 100%;
+		margin-right: 0;
+		margin-left: 0;
+	}
+}
+
+.xm-100 {
+	@include maxw($mobile) {
+		width: 100%;
+		margin-right: 0;
+		margin-left: 0;
+	}
+}
+
+.m-hidden {
+	@include maxw($tabletP) { display: none; }
+}
+
+.xm-hidden {
+	@include maxw($mobile) { display: none; }
+}
+
+.m-shown {
+	@include minw($tabletP + 1px) { display: none; }
+}
+
+.m-ml-0 {
+	@include maxw($tabletP) { margin-left: 0; }
+}
+
+.m-mr-0 {
+	@include maxw($tabletP) { margin-right: 0; }
+}
+
+
+
+
+/* VISIBLE GRID
+----------------------------------------------------------------------------------------------------*/
+
+#grid {
+	@include position(fixed, 0 $margin);
+	z-index: 10000;
+
+	opacity: .2;
+	pointer-events: none;
+
+	transform-origin: center top;
+	transform: scaleY(0);
+	transition: .6s $ease-in-out-quad;
+
+	.grid--visible & { transform: none; }
+
+	@include minw($x-wide) {
+		right: $margin-wide;
+		left: $margin-wide;
+	}
+
+	@include maxw($tabletP) {
+		right: $margin-mobile; left: $margin-mobile;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.grid-col {
+	float: left;
+	height: 100%;
+
+	background: red;
+
+	&:not(:last-child) { margin-right: $gutW; }
+
+	@include maxw($tabletP) {
+		width: 20.43%;
+
+		&:nth-child(n) { margin-right: 0; }
+		&:nth-child(n + 5) { display: none; }
+	}
+}
+
+
+

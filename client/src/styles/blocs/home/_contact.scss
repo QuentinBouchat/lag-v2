@@ -1,0 +1,291 @@
+// CONTACT
+
+#contact {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    background: url('/public/img/map.jpg') no-repeat;
+    background-size: cover;
+    background-position: 23% bottom;
+}
+
+.contact__container {
+    padding-top: 4rem;
+    padding-bottom: 1.5rem;
+    background-color: $white;
+
+    @include maxw($tablet) {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.contact__wrapper {
+    display: flex;
+}
+
+.contact__deco {
+    position: relative;
+    width: 40%;
+    margin-left: 2rem;
+
+    .contact__deco__pc {        
+        @include position(absolute, 50% 25% null 25%);
+        width: 50%;
+        transform: translateY(-50%);
+    }
+
+    .decos__pc {
+        @include ratio(100%, '.icon');
+        width: 100%;
+    }
+
+    .decos__conv {
+        @include ratio(100%, '.icon');
+        @include position(absolute, 50% -25% null null);
+        width: 32%;
+        transform: translateY(-226%);
+    }
+
+    .decos__phone {
+        @include ratio(160%, '.icon');
+        @include position(absolute, 50% null null -30%);
+        width: 14%;
+        transform: translateY(-230%);
+    }
+
+    .decos__cross {
+        &--contact1 {
+            @include position(absolute, -25% null null 5%);
+            width: 1.2rem;
+            height: 1.2rem;
+            transform: rotate(-30deg);
+
+            &::after, &::before {
+                background-color: $mine_shaft;
+            }
+        }
+
+        &--contact2 {
+            @include position(absolute, 84% -22% null null);
+            width: 1.2rem;
+            height: 1.2rem;
+            transform: rotate(-21deg);
+        }
+    }
+
+    .decos__round {
+        &--contact1 {
+            @include position(absolute, -20% null null 43%);
+            width: 1rem;
+            height: 1rem;
+            border-width: 0.25rem;
+        }
+
+        
+        &--contact2 {
+            @include position(absolute, -37% 23% null null);
+            width: 1rem;
+            height: 1rem;
+            border-width: 0.25rem;
+            border-color: $mine_shaft;
+        }
+
+        
+        &--contact3 {
+            @include position(absolute, 50% null null -37%);
+            width: 1.4rem;
+            height: 1.4rem;
+            border-width: 0.3rem;
+            border-color: $mine_shaft;
+        }
+
+        
+        &--contact4 {
+            @include position(absolute, null null -20% 28%);
+            width: 1rem;
+            height: 1rem;
+            border-width: 0.25rem;
+        }
+
+        
+        &--contact5 {
+            @include position(absolute, null 13% -30% null);
+            width: 1.4rem;
+            height: 1.4rem;
+            border-width: 0.4rem;
+            border-color: $mine_shaft;
+        }
+    }
+
+    .decos__doublebar {        
+        &--contact1 {
+            @include position(absolute, 30% -8% null null);
+            @include doublebar($mine_shaft, 0, 0, 1rem, $mine_shaft, 0.7rem, 1rem, 2rem);
+        }
+
+        &--contact2 {
+            @include position(absolute, null null 2% -29%);
+            @include doublebar($mandy, 0, 0, 1.3rem, $mine_shaft, 0.5rem, 0.8rem, 2.2rem);
+        }
+    }
+
+    @include maxw($mobile) {
+        display: none;
+    }
+}
+
+.contact__form {
+    width: 60%;
+    padding: 0 4rem 3rem 4rem;
+
+    @include maxw($mobile) {
+        width: 100%;
+        padding: 0 2rem 2rem 2rem;
+    }
+}
+
+.contact__title {
+    position: relative;
+    margin-bottom: 4rem;
+
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    &::before {
+        content:'';
+        @include position(absolute, null 50% -0.5rem null);
+        height: 0.5rem;
+        width: 5.2rem;
+        background-color: $mine_shaft;
+        border-radius: 0.4rem / 50%;
+        transform: translateX(85%);
+    }
+
+    &::after {
+        content:'';
+        @include position(absolute, null 50% -1.5rem null);
+        height: 0.3rem;
+        width: 1.8rem;
+        background-color: $mandy;
+        border-radius: 0.2rem;
+        transform: translateX(320%);
+    }
+}
+
+.contact__input {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    margin-top: 0.5rem;
+
+    border: none;
+    border-bottom: 1px solid $mandy;
+
+    font-family: $BlueHightway;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    line-height: 4rem;
+    color: $mandy;
+
+    &::placeholder {
+        color: $mandy;
+    }
+
+    &:focus {
+        &::placeholder {
+            opacity: 0.5;
+        }
+    }
+
+    &--textarea {
+        height: 20rem;
+        margin-top: 1.5rem;
+        resize: none;
+        line-height: 1.2;
+    }
+}
+
+.contact__error {
+    font-family: $BlueHightway;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    line-height: 4rem;
+    text-align: center;
+    color: $mandy;
+}
+
+.contact__success {
+    font-family: $BlueHightway;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    line-height: 4rem;
+    text-align: center;
+    color: $mine_shaft;
+}
+
+.contact__send {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.contact__btn {
+    padding: 1rem 2.5rem 0.5rem 2.5rem;
+    background-color: $mandy;
+    border: none;
+    border-radius: 1rem;
+
+    font-family: $BlueHightway;
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: $white;
+}
+
+.contact__rs__banner {
+    padding: 1rem 1rem 0.5rem 1rem;
+    background-color: $mine_shaft;
+
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+
+    @include maxw($mobile) {
+        font-size: 1.8rem;
+    }
+}
+
+.contact__rs__list {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.contact__rs__item {
+    display: inline-block;
+    margin: 0 5.5rem;
+
+    .contact__rs__twitter {
+        @include ratio(80%, '.icon');
+        width: 4.5rem;
+    }
+
+    .contact__rs__linkedin {
+        @include ratio(100%, '.icon');
+        width: 4rem;
+    }
+
+    .contact__rs__instagram {
+        @include ratio(100%, '.icon');
+        width: 4rem;
+    }
+
+    @include maxw($mobile) {
+        margin: 0 2rem;
+    }
+}

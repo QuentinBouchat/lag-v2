@@ -1,0 +1,20 @@
+
+/* FOOTER
+----------------------------------------------------------------------------------------------------*/
+
+#footer {
+    font-size: 1.2rem;
+    color: $mine_shaft;
+    line-height: 6rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include maxw($mobile) {
+        padding: 1rem 0;
+        font-size: 1rem;
+        line-height: 1;
+    }
+}
+
+
+

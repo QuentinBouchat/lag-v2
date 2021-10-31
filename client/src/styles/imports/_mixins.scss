@@ -1,0 +1,138 @@
+
+/* MIXINS
+----------------------------------------------------------------------------------------------------*/
+
+/* Media Queries
+---------------------------------------------------------*/
+
+// Minimum WIDTH
+@mixin minw($val) {
+	@media only screen and (min-width: $val) {
+		@content;
+	}
+}
+
+// Maximum WIDTH
+@mixin maxw($val) {
+	@media only screen and (max-width: $val) {
+		@content;
+	}
+}
+
+// Minimum HEIGHT
+@mixin minh($val) {
+	@media only screen and (min-height: $val) {
+		@content;
+	}
+}
+
+// Maximum HEIGHT
+@mixin maxh($val) {
+	@media only screen and (max-height: $val) {
+		@content;
+	}
+}
+
+// Minimum WIDTH & Maximum HEIGHT
+@mixin minw-maxh($w, $h) {
+	@media only screen and (min-width: $w) and (max-height: $h) {
+		@content;
+	}
+}
+
+// Minimum WIDTH & Minimum HEIGHT
+@mixin minw-minh($w,$h) {
+	@media only screen and (min-width: $w) and (min-height: $h) {
+		@content;
+	}
+}
+
+// Maximum WIDTH & Maximum HEIGHT
+@mixin maxw-maxh($w, $h) {
+	@media only screen and (max-width: $w) and (max-height: $h) {
+		@content;
+	}
+}
+
+// Maximum WIDTH OR Maximum HEIGHT
+@mixin maxw-or-maxh($w, $h) {
+	@media only screen and (max-width: $w), only screen and (max-height: $h) {
+		@content;
+	}
+}
+
+
+
+
+/* TEXT-RELATED
+----------------------------------------------------------------------------------------------------*/
+
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
+
+
+
+
+/* SIZING
+----------------------------------------------------------------------------------------------------*/
+
+@mixin ratio($val, $element: div, $offset: 0px) {
+	position: relative;
+
+	@if $element != none {
+		> #{$element} {
+			@include position(absolute, $offset);
+		}
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		padding-top: $val;
+	}
+}
+
+
+
+
+/* DECOS
+----------------------------------------------------------------------------------------------------*/
+
+@mixin doublebar($first_color, $first_top, $first_left, $first-width, $second_color, $second_top, $second_left, $second_width) {
+	position: absolute;
+
+	&::before {
+		content:'';
+		@include position(absolute, $first_top null null $first_left);
+		height: #{$first-width/5};
+		width: $first-width;
+		background-color: $first_color;
+		border-top-left-radius: #{$first-width/6} 50%;
+		border-top-right-radius: #{$first-width/6} 50%;
+		border-bottom-right-radius: #{$first-width/6} 50%;
+		border-bottom-left-radius: #{$first-width/6} 50%;
+	}
+
+	&::after {
+		content:'';
+		@include position(absolute, $second_top null null $second_left);
+		height: #{$second_width/5};
+		width: $second_width;
+		background-color: $second_color;
+		border-top-left-radius: #{$second_width/6} 50%;
+		border-top-right-radius: #{$second_width/6} 50%;
+		border-bottom-right-radius: #{$second_width/6} 50%;
+		border-bottom-left-radius: #{$second_width/6} 50%;
+	}
+}
+
+
+

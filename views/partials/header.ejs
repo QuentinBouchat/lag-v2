@@ -1,0 +1,54 @@
+<header id="header">
+	<nav class="header__nav">
+		<ul class="header__nav__list">
+
+            <% page.nav.forEach(function(menu){ %>
+                <li class="header__nav__item<%=  page.current === menu.name ? ' header__nav__item--active' : '' %>"><a href="<%= menu.link %>"><%= menu.text %></a></li>
+            <% }); %>
+
+        </ul>
+    </nav>
+
+    <h1 class="hidden-visually">Julien Lagneaux</h1>
+
+    <figure class="header__logo">
+        <span class="header__logo__wrapper">
+            <img class="header__logo__desktop" src="/public/img/header.png" alt="Julien Lagneaux" title="Julien Lagneaux" />
+            <img class="header__logo__mobile" src="/public/img/header-mobile.png" alt="Julien Lagneaux"  title="Julien Lagneaux" />
+
+            <div class="header__decos">
+                <div class="header__decos__1" data-float="1"><%- include('../svg/icons/header/deco1.svg') %></div>
+                <div class="header__decos__2" data-float="1"><%- include('../svg/icons/header/deco2.svg') %></div>
+                <div class="header__decos__3" data-float="1.2"><%- include('../svg/icons/header/deco3.svg') %></div>
+                <div class="header__decos__4" data-float="1.4"><%- include('../svg/icons/header/deco4.svg') %></div>
+                <div class="header__decos__5" data-float="0.8"><%- include('../svg/icons/header/deco5.svg') %></div>
+                <div class="header__decos__6" data-float="1.6"><%- include('../svg/icons/header/deco6.svg') %></div>
+                <div class="header__decos__7" data-float="1.4"><%- include('../svg/icons/header/deco7.svg') %></div>
+                <div class="header__decos__8" data-float="1.8"><%- include('../svg/icons/header/deco8.svg') %></div>
+                <div class="header__decos__9" data-float="1"><%- include('../svg/icons/header/deco9.svg') %></div>
+                <div class="header__decos__10" data-float="2"><%- include('../svg/icons/header/deco10.svg') %></div>
+                <div class="header__decos__11" data-float="1"><%- include('../svg/icons/header/deco11.svg') %></div>
+                <div class="header__decos__12" data-float="0.7"><%- include('../svg/icons/header/deco12.svg') %></div>
+                <div class="header__decos__13" data-float="1.4"><%- include('../svg/icons/header/deco13.svg') %></div>
+                <div class="header__decos__14" data-float="1"><%- include('../svg/icons/header/deco14.svg') %></div>
+                <div class="header__decos__15" data-float="0.8"><%- include('../svg/icons/header/deco15.svg') %></div>
+                <div class="header__decos__16" data-float="1.8"><%- include('../svg/icons/header/deco16.svg') %></div>
+                <div class="header__decos__17" data-float="2"><%- include('../svg/icons/header/deco17.svg') %></div>
+
+                <div class="decos__round decos__round--header1" data-float="0.4"></div>
+                <div class="decos__round decos__round--header2" data-float="0.4"></div>
+                <div class="decos__round decos__round--header3" data-float="0.6"></div>
+                <div class="decos__round decos__round--header4" data-float="0.4"></div>
+                <div class="decos__round decos__round--header5" data-float="0.4"></div>
+                <div class="decos__round decos__round--header6" data-float="0.4"></div>
+
+                <div class="decos__cross decos__cross--header1" data-float="0.4"></div>
+                <div class="decos__cross decos__cross--header2" data-float="0.6"></div>
+                <div class="decos__cross decos__cross--header3" data-float="0.6"></div>
+                <div class="decos__cross decos__cross--header4" data-float="0.4"></div>
+            </div>
+            <div class="decors__arrow"><%- include('../svg/icons/header/headerarrow.svg') %></div>
+        </span>
+    </figure>
+
+</header><!-- /#header -->

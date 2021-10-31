@@ -1,0 +1,195 @@
+<section id="about">
+    <h2 class="about__title">
+        <span class="about__title__wrapper"><%- include('./svg/icons/about.svg') %><%= about.title %></span>
+    </h2>
+
+    <section class="about__me">
+        <h3 class="about__subtitle"><%= about.me.title %></h3>
+
+        <% about.me.content.forEach(function(content){ %>
+            <p class="about__content"><%= content %></p>
+        <% }); %>
+    </section>
+
+    <div class="about__band">
+        <span class="about__band__icon"><%- include('./svg/icons/certification.svg') %></span><%= about.band %>
+    </div>
+
+    <section class="about__activity">
+        <h3 class="about__subtitle"><%= about.activity.title %></h3>
+
+        <% about.activity.content.forEach(function(content){ %>
+            <p class="about__content"><%= content %></p>
+        <% }); %>
+    </section>
+
+    <div class="about__decos">
+        <div class="decos__round decos__round--about1"></div>
+        <div class="decos__round decos__round--about2"></div>
+        <div class="decos__round decos__round--about3"></div>
+        <div class="decos__round decos__round--about4"></div>
+        <div class="decos__round decos__round--about5"></div>
+        <div class="decos__round decos__round--about6"></div>
+
+        <div class="decos__cross decos__cross--about1"></div>
+        <div class="decos__cross decos__cross--about2"></div>
+        <div class="decos__cross decos__cross--about3"></div>
+        <div class="decos__cross decos__cross--about4"></div>
+
+        <div class="decos__doublebar decos__doublebar--about1"></div>
+        <div class="decos__doublebar decos__doublebar--about2"></div>
+        <div class="decos__doublebar decos__doublebar--about3"></div>
+    </div>
+</section>
+
+
+<section id="services" class="ctn">
+
+    <span class="services__arrow"><%- include('./svg/icons/skillsarrow.svg') %></span>
+
+    <h2 class="services__title"><%= services.title %></h2>
+
+    <ul class="services__list col-8 mlg-2">
+        <% services.list.forEach(function(service){ %>
+            <li class="services__item">
+                <div class="services__item__wrapper">
+                    <span class="services__item__header">
+                        <%- include('./svg/icons/services/'+ service.icon +'.svg') %>
+                        <h3 class="services__item__title"><%- service.title %></h3>
+                    </span>
+                </div>
+                <p class="services__item__content">
+                    <%= service.content %>
+                </p>
+            </li>
+        <% }); %>
+    </ul>
+
+    <div class="services__decos | ctn">
+        <div class="services__decos__container | col-8 mlg-2">
+            <div class="decos__round decos__round--services1"></div>
+            <div class="decos__round decos__round--services2"></div>
+            <div class="decos__round decos__round--services3"></div>
+
+            <div class="decos__cross decos__cross--services1"></div>
+            <div class="decos__cross decos__cross--services2"></div>
+            <div class="decos__cross decos__cross--services3"></div>
+            <div class="decos__cross decos__cross--services4"></div>
+
+            <div class="decos__doublebar decos__doublebar--services1"></div>
+            <div class="decos__doublebar decos__doublebar--services2"></div>
+            <div class="decos__doublebar decos__doublebar--services3"></div>
+            <div class="decos__doublebar decos__doublebar--services4"></div>
+        </div>
+    </div>
+</section>
+
+
+<section class="qualities | ctn">
+    <h2 class="hidden-visually"><%= qualities.title %></h2>
+    <ul class="qualities__list">
+        <% qualities.list.forEach(function(quality){ %>
+            <li class="qualities__item"><%= quality %></li>
+        <% }); %>
+    </ul>
+</section>
+
+
+<section id="references" class="ctn">
+    <h2 class="references__title"><%= references.title %></h2>
+
+    <ul class="references__list | col-10 mlg-1">
+        <% references.list.forEach(function(reference){ %>
+            <li class="references__item">
+                <a class="references__item__link" href="<%= reference.link %>" target="_blank">
+                    <figure class="references__item__figure">
+                        <div class="references__item__wrapper">
+                            <img src="/public/img/references/<%= reference.img %>" alt="<%= reference.title %>" title="<%= reference.title %>" />
+                        </div>
+                    </figure>
+                </a>
+            </li>
+        <% }); %>
+    </ul>
+</section>
+
+
+<section class="opinions | ctn">
+    <h2 class="hidden-visually"><%= opinions.title %></h2>
+
+    <div class="opinions__wrapper col-8 mlg-2">
+        <div class="swiper__btn__previous"><%- include('./svg/icons/arrow.svg') %></div>
+        <div class="swiper-container">
+            <ul class="opinions__list swiper-wrapper">
+                <% opinions.list.forEach(function(opinion){ %>
+                    <li class="opinions__item swiper-slide">
+                        <blockquote class="opinions__quote">
+                            <cite><img src="/public/img/opinions/<%= opinion.img %>" alt="<%= opinion.author %>" title="<%= opinion.author %>" /></cite>
+                            <div>
+                                <p><%- opinion.content %></p>
+                                <cite class="opinions__quote__author"><%= opinion.author %></cite>
+                            </div>
+                        </blockquote>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+        <div class="swiper__btn__next"><%- include('./svg/icons/arrow.svg') %></div>
+    </div>
+</section>
+
+
+<section id="contact" class="ctn">
+    <h2 class="hidden-visually"><% contact.title %></h2>
+    <div class="contact__container | col-8 mlg-2">
+
+        <div class="contact__wrapper">
+            <div class="contact__deco">
+                <div class="contact__deco__pc">
+                    <div class="decos__pc"><%- include('./svg/icons/pc.svg') %></div>
+
+                    <div class="decos__cross decos__cross--contact1"></div>
+                    <div class="decos__cross decos__cross--contact2"></div>
+                    
+                    <div class="decos__round decos__round--contact1"></div>
+                    <div class="decos__round decos__round--contact2"></div>
+                    <div class="decos__round decos__round--contact3"></div>
+                    <div class="decos__round decos__round--contact4"></div>
+                    <div class="decos__round decos__round--contact5"></div>
+                    
+                    <div class="decos__doublebar decos__doublebar--contact1"></div>
+                    <div class="decos__doublebar decos__doublebar--contact2"></div>
+
+                    
+                    <div class="decos__conv"><%- include('./svg/icons/conv.svg') %></div>
+                    <div class="decos__phone"><%- include('./svg/icons/phone.svg') %></div>
+                </div>
+            </div>
+
+            <form class="contact__form">
+                <legend class="contact__title"><%= contact.title %></legend>
+
+                <input class="contact__input" id="name" name="name" placeholder="<%= contact.name %>" required />
+                <input class="contact__input" id="email" name="email" type="email" placeholder="<%= contact.email %>" required />
+                <input class="contact__input" id="subject" name="subject" placeholder="<%= contact.subject %>" required />
+
+                <textarea class="contact__input contact__input--textarea" id="message" name="message" placeholder="<%= contact.message %>" required></textarea>
+
+                <p class="contact__error hidden-visually"><%= contact.error %></p>
+                <p class="contact__success hidden-visually"><%= contact.success %></p>
+
+                <div class="contact__send">
+                    <button type="submit" class="contact__btn"><%= contact.send %></button>
+                </div>
+            </form>
+        </div>
+
+        <div class="contact__rs__banner"><%= contact.rs.title %></div>
+
+        <ul class="contact__rs__list">
+            <% contact.rs.list.forEach(function(rs){ %>
+                <li class="contact__rs__item"><a href="<%= rs.link %>" target="_blank"><div class="contact__rs__<%= rs.icon %>"><%- include('./svg/icons/'+ rs.icon +'.svg') %></div></a></li>
+            <% }); %>
+        </ul>
+    </div>
+</section>

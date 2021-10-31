@@ -1,0 +1,81 @@
+// OPINIONS
+
+.opinions {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: $mandy;
+    color: $white;
+}
+
+.opinions__wrapper {
+    display: flex;
+    align-items: center;
+
+    .icon {
+        &--arrow {
+            width: 2.2rem;
+            fill: $white;
+        }
+    }
+
+    @include maxw($tablet) {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.opinions__item {
+    align-self: center;
+    padding: 0 1rem;
+}
+
+.opinions__quote {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    cite {
+        margin-right: 3rem;
+    }
+
+    p {
+        margin-bottom: 1rem;
+    }
+
+    .opinions__quote__author {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        text-align: right;
+    }
+
+    @include maxw($mobile) {
+        flex-direction: column;
+
+        cite {
+            margin-right: 0;
+        }
+    }
+}
+
+.swiper__btn__next {
+    cursor: pointer;
+    margin-left: 3rem;
+
+    @include maxw($mobile) {
+        margin-left: 2rem;
+    }
+}
+
+.swiper__btn__previous {
+    cursor: pointer;
+    margin-right: 3rem;
+
+    @include maxw($mobile) {
+        margin-right: 2rem;
+    }
+
+    .icon {
+        transform: rotate(180deg);
+    }
+}

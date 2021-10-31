@@ -1,0 +1,24 @@
+
+/* FONTS
+----------------------------------------------------------------------------------------------------*/
+
+// Font Style & Weight
+// @font-face {
+// 	font-family: "FontName";
+// 	font-weight: 500;
+// 	font-style: normal;
+// 	src: url("../../fonts/FontName/FontName.eot?#iefix");
+// 	src: url("../../fonts/FontName/FontName.eot?#iefix") format("eot"),
+// 		 url("../../fonts/FontName/FontName.woff") format("woff"),
+// 		 url("../../fonts/FontName/FontName.ttf") format("truetype"),
+// 		 url("../../fonts/FontName/FontName.svg") format("svg");
+// }
+
+
+
+/* Cursive Standard
+---------------------------------------------------------*/
+
+@include font-face('BlueHightway', '../assets/fonts/blue_highway_rg', 400);
+@include font-face('BlueHightway', '../assets/fonts/blue_highway_bd', 700);
+@include font-face('BlueHightwayCondensed', '../assets/fonts/blue_highway_cd', 400);

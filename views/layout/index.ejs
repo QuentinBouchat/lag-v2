@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8" lang="fr"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="fr"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="fr" class="preload"><!--<![endif]-->
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="canonical" href="<%= url %>">
+
+		<!-- Description -->
+		<title><%= page.title %></title>
+		<meta name="description" content="<%= page.description %>">
+		<meta name="keywords" content="<%= page.keywords %>">
+
+		<!-- Open Graph -->
+		<meta property="og:site_name" content="<%= siteName %>">
+		<meta property="og:title" content="<%= page.title %>">
+		<meta property="og:description" content="<%= page.description %>">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="<%= url %>">
+		<meta property="og:image" content="<%= baseUrl %>/public/img/share-assets/og-share-img.jpg">
+		<meta property="og:image:width" content="1800">
+		<meta property="og:image:height" content="945">
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="<%= siteName %>">
+		<meta name="twitter:creator" content="">
+		<meta name="twitter:title" content="<%= page.title %>">
+		<meta name="twitter:description" content="<%= page.description %>">
+		<meta name="twitter:image" content="<%= baseUrl %>/public/img/share-assets/og-share-img.jpg">
+
+		<!-- Viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<!-- Icons -->
+		<link rel="manifest" href="/public/img/app-icons/manifest.json">
+		<link rel="shortcut icon" href="/public/img/app-icons/favicon.ico">
+		<link rel="icon" type="image/png" href="/public/img/app-icons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/public/img/app-icons/favicon-16x16.png" sizes="16x16">
+
+		<!-- Web App -->
+		<meta name="theme-color" content="#ffffff">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="">
+		<meta name="apple-mobile-web-app-status-bar-style" content="translucent">
+	<link href="../../public/style.376d0824e9de7b0f07cc.css?dabcd747925e874fe395" rel="stylesheet"></head>
+
+	<body data-page="<%= page.current %>">
+
+		<div id="wrapper">
+
+            <%- include('../partials/header.ejs') %>
+
+			<main id="content" role="main">
+				<div class="content__wrapper">
+
+					<div class="content__inner">
+						<%- body %>
+					</div>
+
+				</div>
+			</main><!-- /#content -->
+
+			<%- include('../partials/footer.ejs') %>
+
+		</div><!-- /#wrapper -->
+	<script type="text/javascript" src="../../public/main.1ff6a3ad5e06de6198ac.js?dabcd747925e874fe395"></script></body>
+
+</html>

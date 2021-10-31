@@ -1,0 +1,28 @@
+<svg class="icon icon--about" viewBox="0 0 230.1 231">
+    <rect class="cls-1" x="57.9" y="74.3" width="106.7" height="6.8"/>
+    <path class="cls-2"
+          d="M222.4,224.1H6.8V94.8H229.2v-34H118V58.3a12.5,12.5,0,0,0-12.5-12.5H38.8a5.7,5.7,0,0,1-5.7-5.7,5.63,5.63,0,0,1,5.7-5.7H195.6a13.2,13.2,0,0,0,0-26.4H98.2a5.7,5.7,0,0,1-5.7-5.7V0H85.7V2.3A12.5,12.5,0,0,0,98.2,14.8h97.4a6.4,6.4,0,0,1,0,12.8H38.8a12.5,12.5,0,0,0,0,25h66.7a5.7,5.7,0,0,1,5.7,5.7v2.5H0V231H229.2V176.3h-6.8ZM6.8,67.5H222.4V87.9H6.8Z"/>
+    <rect class="cls-2" x="18.5" y="110.6" width="184.6" height="6.8"/>
+    <rect class="cls-2" x="23.8" y="128.8" width="160.8" height="6.8"/>
+    <rect class="cls-2" x="18.5" y="147" width="137" height="6.8"/>
+    <rect class="cls-2" x="18.4" y="165.1" width="66.7" height="6.8"/>
+    <rect class="cls-2" x="45.6" y="183.3" width="106.2" height="6.8"/>
+    <rect class="cls-2" x="18.4" y="201.4" width="94" height="6.8"/>
+    <path class="cls-1"
+          d="M230.1,114.9l-4.8-4.8L167,168.4l-9.6,33.7,33.7-9.6,39-39-4.8-4.8-36,36-14.4-14.4Zm-58.4,61.8,11.1,11.1-15.5,4.4Z"/>
+    <rect class="cls-1" x="54.7" y="14" width="6.8" height="6.8"/>
+    <rect class="cls-1" x="68.3" y="14" width="6.8" height="6.8"/>
+    <rect class="cls-1" x="41.1" y="14" width="6.8" height="6.8"/>
+    <rect class="cls-1" x="145.5" y="41.2" width="6.8" height="6.8"/>
+    <rect class="cls-1" x="172.7" y="41.2" width="6.8" height="6.8"/>
+    <rect class="cls-1" x="159.1" y="41.2" width="6.8" height="6.8"/>
+    <path class="cls-3" d="M215.6,217.3H189.5v-6.8h19.3V195.7h6.8v21.6Zm-32.9,0h-6.8v-6.8h6.8Z"/>
+    <path class="cls-1" d="M212.2,81.1H185V74.3h27.2Zm-34,0h-6.8V74.3h6.8Z"/>
+    <rect class="cls-3" x="105.5" y="165.1" width="6.8" height="6.8"/>
+    <rect class="cls-3" x="91.9" y="165.1" width="6.8" height="6.8"/>
+    <rect class="cls-3" x="132.8" y="201.4" width="6.8" height="6.8"/>
+    <rect class="cls-3" x="119.2" y="201.4" width="6.8" height="6.8"/>
+    <rect class="cls-1" x="17" y="74.3" width="6.8" height="6.8"/>
+    <rect class="cls-1" x="30.6" y="74.3" width="6.8" height="6.8"/>
+    <rect class="cls-1" x="44.3" y="74.3" width="6.8" height="6.8"/>
+</svg>

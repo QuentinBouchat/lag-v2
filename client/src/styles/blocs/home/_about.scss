@@ -1,0 +1,221 @@
+// ABOUT
+
+#about {
+    position: relative;
+    width: 50rem;
+    margin: auto;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+
+    @include maxw($mobile) {
+        width: 90%;
+    }
+}
+
+.about__title {
+    position: relative;
+    margin-bottom: 3rem;
+    font-family: $BlueHightwayCondensed;
+    font-size: 5rem;
+    font-weight: normal;
+    letter-spacing: .6rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: $mandy;
+
+    &::before {
+        content:'';
+        @include position(absolute, null 50% 0 null);
+        height: 0.7rem;
+        width: 7rem;
+        background-color: $mandy;
+        border-radius: 0.5rem / 50%;
+        transform: translateX(175%);
+    }
+
+    &::after {
+        content:'';
+        @include position(absolute, null 50% -0.75rem null);
+        height: 0.6rem;
+        width: 3.6rem;
+        background-color: $mine_shaft;
+        border-radius: 0.3rem;
+        transform: translateX(375%);
+    }
+}
+
+.about__title__wrapper {
+    position: relative;
+
+    .icon {
+        @include position(absolute, -1.5rem null null -9rem);
+        width: 6.5rem;
+    }
+}
+
+.about__subtitle {
+    margin-bottom: -0.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about__me, .about__activity {
+    margin: 0 4rem;
+    padding: 1.5rem 1rem;
+
+    @include maxw($mobile) {
+        margin: 0 3rem;
+    }
+}
+
+.about__me {
+    background-color: $silver;
+}
+
+.about__content {
+    margin-top: 2rem;
+}
+
+.about__activity {
+    background-color: $mandy;
+    color: $white;
+}
+
+.about__band {
+    position: relative;
+
+    padding-top: 0.4rem;
+    background-color: $mine_shaft_2;
+    border-radius: 2% / 50%;
+
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+
+    @include maxw($mobile) {
+        border-radius: 4% / 50%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.about__band__icon {
+    @include position(absolute, -0.3rem null null -1.5rem);
+
+    .icon {
+        width: 4rem;
+    }
+}
+
+.about__decos {
+    @include position(absolute, 0);
+    z-index: -1;
+
+    .decos__round {
+        &--about1 {
+            @include position(absolute, -1rem null null 1rem);
+            width: 1.4rem;
+            height: 1.4rem;
+            border-width: 0.4rem;
+        }
+
+        &--about2 {
+            @include position(absolute, 14rem null null -17rem);
+            width: 1rem;
+            height: 1rem;
+            border-width: 0.3rem;
+        }
+
+        &--about3 {
+            @include position(absolute, null null 26% -9rem);
+            width: 2rem;
+            height: 2rem;
+            border-width: 0.5rem;
+            border-color: $mine_shaft;
+        }
+
+        &--about4{
+            @include position(absolute, 13rem -13rem null null);
+            width: 1.8rem;
+            height: 1.8rem;
+            border-width: 0.5rem;
+        }
+
+        &--about5 {
+            @include position(absolute, null -23rem 38% null);
+            width: 1.1rem;
+            height: 1.1rem;
+            border-width: 0.3rem;
+            border-color: $mine_shaft;
+        }
+
+        &--about6 {
+            @include position(absolute, null -12rem 0.5rem null);
+            width: 1.8rem;
+            height: 1.8rem;
+            border-width: 0.5rem;
+            border-color: $mine_shaft;
+        }
+    }
+
+    .decos__cross {
+        &--about1 {
+            @include position(absolute, 35% null null -11rem);
+            width: 1.7rem;
+            height: 1.7rem;
+            transform: rotate(32deg);
+
+            &::after, &::before {
+                background-color: $mine_shaft;
+            }
+        }
+
+        &--about2 {
+            @include position(absolute, null null 4rem -9.5rem);
+            width: 2rem;
+            height: 2rem;
+            transform: rotate(-32deg);
+        }
+
+        &--about3 {
+            @include position(absolute, 5rem -1rem null null);
+            width: 1.6rem;
+            height: 1.6rem;
+            transform: rotate(17deg);
+
+            &::after, &::before {
+                background-color: $mine_shaft;
+            }
+        }
+
+        &--about4 {
+            @include position(absolute, null -8rem 25% null);
+            width: 2rem;
+            height: 2rem;
+            transform: rotate(-25deg);
+        }
+    }
+
+    .decos__doublebar {
+        &--about1 {
+            @include position(absolute, 6rem null null -9rem);
+            @include doublebar($mine_shaft, 0, 0, 1.5rem, $mine_shaft, 0.7rem, 1rem, 2.6rem);
+        }
+
+        &--about2 {
+            @include position(absolute, 60% null null -19rem);
+            @include doublebar($mine_shaft, 0, 0, 1.3rem, $mandy, 0.7rem, 1rem, 2.2rem);
+        }
+
+        &--about3 {
+            @include position(absolute, 38% -14rem null null);
+            @include doublebar($mandy, 0, 0, 2.8rem, $mine_shaft, 1rem, 2.4rem, 1.5rem);
+        }
+    }
+
+}

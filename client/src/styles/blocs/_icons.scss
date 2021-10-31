@@ -1,0 +1,393 @@
+
+/* ICONS
+----------------------------------------------------------------------------------------------------*/
+
+.icon {
+
+    // HEADER
+    &--headerarrow {
+        .cls-1 {
+            fill: none;
+            stroke: #fff;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 26px;
+        }
+    }
+
+    &--headerdeco1 {
+        .cls-1 {
+            fill: #fff;
+            stroke: #fff;
+            stroke-miterlimit: 10;
+        }
+    }
+
+    &--headerdeco2 {
+        .cls-1 {
+            fill: none;
+            stroke: #fff;
+            stroke-miterlimit: 10;
+            stroke-width: 10px;
+        }
+    }
+
+    &--headerdeco3 {
+        .cls-1 {
+            fill: #fff;
+        }
+    }
+
+    &--headerdeco4 {
+        .cls-1 {
+            fill: #fff;
+        }
+    }
+
+    &--headerdeco5 {
+        .cls-1 {
+            fill: #fff;
+        }
+    }
+
+    &--headerdeco6 {
+        .cls-1 {
+            fill: #fff;
+        }
+    }
+
+    &--headerdeco7 {
+        .cls-1 {
+            fill: #fff;
+        }
+    }
+
+    &--headerdeco8 {
+        .cls-1 {
+            fill: #fff;
+        }
+    }
+
+    &--headerdeco9 {
+        .cls-1 {
+            fill: #fff;
+        }
+    }
+
+    &--headerdeco10 {
+        .cls-1 {
+            fill: #fff;
+        }
+    }
+
+    &--headerdeco11 {
+        .cls-1 {
+            fill: #fff;
+        }
+    }
+
+    &--headerdeco12 {
+        .cls-1 {
+            fill: $white;
+        }
+    }
+
+    &--headerdeco13 {
+        .cls-1 {
+            fill: #fff;
+        }
+    }
+
+    &--headerdeco14 {
+        .cls-1 {
+            fill: #fff;
+        }
+    }
+
+    &--headerdeco15 {
+        .cls-1 {
+            fill: #fff;
+        }
+    }
+
+    &--headerdeco16 {
+        .cls-1 {
+            fill: #fff;
+        }
+    }
+
+    &--headerdeco17 {
+        .cls-1 {
+            fill: #fff;
+            fill-rule: evenodd;
+        }
+    }
+
+    // ABOUT
+    &--about {
+        .cls-1 {
+            fill: $mandy;
+        }
+
+        .cls-2 {
+            fill: $mine_shaft;
+        }
+
+        .cls-3 {
+            fill: $white;
+        }
+    }
+
+    // RS
+    &--tw {
+        path {
+            fill: none;
+            stroke: $mine_shaft;
+            stroke-miterlimit: 10;
+            stroke-width: 10px;
+        }
+    }
+
+    &--linkedin {
+        path {
+            fill: none;
+            stroke: $mine_shaft;
+            stroke-miterlimit: 10;
+            stroke-width: 10px;
+        }
+    }
+
+    &--instagram {
+        path {
+            fill: none;
+            stroke: $mine_shaft;
+            stroke-miterlimit: 10;
+            stroke-width: 6px;
+        }
+    }
+
+
+    // SERVICES
+    &--skillsarrow {
+        .cls-1 {
+            fill: #fff;
+        }
+
+        .cls-2 {
+            fill: #ea4d4f;
+        }
+    }
+
+    &--strat {
+        .cls-1{
+            fill: $white;
+        }
+        .cls-2{
+            fill:$mandy;
+        }
+    }
+
+    &--games {
+        .cls-1 {
+            fill: $white;
+        }
+        .cls-2 {
+            fill: $mandy;
+        }
+        .cls-3 {
+            fill: $white;
+        }
+        .cls-4 {
+            fill: $mandy;
+        }
+    }
+
+    &--need {
+        .cls-1 {
+            fill: $white;
+        }
+
+        .cls-2 {
+            fill: $mandy;
+        }
+
+        .cls-3 {
+            fill: $mandy;
+        }
+    }
+
+    &--cm {
+        .cls-1 {
+            fill: $white;
+        }
+
+        .cls-2 {
+            fill: $mandy;
+        }
+
+        .cls-3 {
+            fill: $mine_shaft;
+            stroke: $white;
+        }
+
+        .cls-3, .cls-4 {
+            stroke-miterlimit: 10;
+            stroke-width: 4px;
+        }
+
+        .cls-4 {
+            fill: none;
+            stroke: $mandy;
+        }
+    }
+
+    &--redac {
+        .cls-1 {
+            fill: $mandy;
+        }
+
+        .cls-2 {
+            fill: #fff;
+        }
+
+        .cls-3 {
+            fill: $white;
+        }
+
+        .cls-4 {
+            fill: none;
+            stroke: $mandy;
+            stroke-miterlimit: 10;
+            stroke-width: 3px;
+        }
+    }
+
+    &--ereput {
+        .cls-1 {
+            fill: $mandy;
+        }
+
+        .cls-2 {
+            fill: $white;
+        }
+    }
+
+    &--relations {
+        .cls-1, .cls-4 {
+            fill: $white;
+        }
+
+        .cls-2 {
+            fill: $mandy;
+        }
+
+        .cls-3 {
+            fill: $mine_shaft;
+        }
+
+        .cls-4 {
+            stroke: $white;
+            stroke-miterlimit: 10;
+            stroke-width: 2px;
+        }
+    }
+
+    &--ads {
+        .cls-1 {
+            fill: $white;
+        }
+
+        .cls-2 {
+            fill: $mandy;
+        }
+
+        .cls-3 {
+            fill: $mine_shaft;
+        }
+    }
+
+    &--live {
+        .cls-1 {
+            fill: $mandy;
+        }
+
+        .cls-2, .cls-3 {
+            fill: $white;
+        }
+
+        .cls-3 {
+            stroke: $mandy;
+            stroke-width: 2px;
+        }
+
+        .cls-3, .cls-4 {
+            stroke-miterlimit: 10;
+        }
+
+        .cls-4 {
+            fill: none;
+            stroke: $white;
+            stroke-width: 3px;
+        }
+    }
+
+
+    &--pc {
+        .cls-1 {
+            fill: $mandy;
+        }
+    }
+
+    &--conv {
+        .cls-1 {
+            fill: $mandy;
+            stroke-width: 2px;
+        }
+    }
+
+    &--phone {
+        path {
+            fill: none;
+            stroke: $mandy;
+            stroke-miterlimit: 12;
+            stroke-width: 16px;
+        }
+    }
+
+}
+
+
+
+
+// Decos
+
+.decos__round {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border: 0.2rem solid $mandy;
+    border-radius: 50%;
+}
+
+.decos__cross {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+
+    &::before {
+        content:'';
+        @include position(absolute, 40% 0 40% 0);
+        background-color: $mandy;
+        border-radius: 10% / 50%;
+    }
+
+    &::after {
+        content:'';
+        @include position(absolute, 0 40% 0 40%);
+        background-color: $mandy;
+        border-radius: 50% / 10%;
+    }
+}
+
+
+

@@ -1,0 +1,117 @@
+
+/* MAIN
+----------------------------------------------------------------------------------------------------*/
+
+/* Global
+---------------------------------------------------------*/
+
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+
+	-webkit-tap-highlight-color: rgba(#000,0);
+}
+
+*::before,
+*::after {
+	-webkit-touch-callout: none;
+	user-select: none;
+}
+
+.noselect,
+.dragging * {
+	-webkit-touch-callout: none;
+	user-select: none;
+}
+
+.scrolling * { pointer-events: none !important; }
+
+.no-transition { transition: none !important; }
+
+::selection      { color: #fff; background: red; }
+::-moz-selection { color: #fff; background: red; }
+
+.hidden { display: none !important; }
+
+// Hide element visually
+// while still making it available
+// to search engines & screen readers
+.hidden-visually {
+	overflow: hidden;
+	position: absolute;
+	width: 1px !important; height: 1px !important;
+
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+a, a:visited, a:link, a.postlink, a.postlink:visited, a.postlink:link {
+	color: $mandy;
+	transition: .4s $ease-out-cubic;
+
+	&:hover {
+		color: $persian_red;
+	}
+}
+
+
+
+
+/* Structure
+---------------------------------------------------------*/
+
+html {
+	width: 100%; height: 100%;
+
+	@include minw($x-wide) { font-size: 70%; }
+}
+
+body {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 100%; height: 100%;
+	background-color: $white;
+
+	text-rendering: optimizeLegibility;
+	@include font-smoothing(on);
+	font-family: $BlueHightway;
+	font-size: 1.5rem;
+	line-height: 1.2;
+	letter-spacing: .15rem;
+	color: $black;
+
+	&.grabbing *  { cursor: grabbing !important; }
+
+	@include minw($x-wide)  { font-size: 1.8rem; }
+	@include minw($xx-wide) { font-size: 2rem; }
+}
+
+#wrapper {
+	overflow: hidden;
+}
+
+#content {
+	//
+}
+
+.content__wrapper {
+	position: relative;
+	width: 100%; height: 100%;
+}
+
+.content__inner {
+	position: relative;
+	z-index: 1;
+
+	transition: opacity .8s .5s ease;
+
+	&.is--coming,
+	&.is--going { opacity: 0; }
+
+	&.is--going { transition-delay: 0s; }
+}
+
+
+
