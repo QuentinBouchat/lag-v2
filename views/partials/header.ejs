@@ -3,7 +3,7 @@
 		<ul class="header__nav__list">
 
             <% page.nav.forEach(function(menu){ %>
-                <li class="header__nav__item<%=  page.current === menu.name ? ' header__nav__item--active' : '' %>"><a href="<%= menu.link %>"><%= menu.text %></a></li>
+                <li class="header__nav__item<%=  page.current === menu.name ? ' header__nav__item--active' : '' %>"><a href="<%= menu.link %>" <%= menu.external ? 'target="_blank"': '' %>><%= menu.text %></a></li>
             <% }); %>
 
         </ul>

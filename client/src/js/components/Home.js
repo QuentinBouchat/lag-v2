@@ -28,8 +28,11 @@ export default class Home {
 
     bindEvents() {
         $(document).on('click', '.header__nav__item a', (e) => {
-            e.preventDefault()
             const $this = $(e.currentTarget)
+            if ($this.attr('target')) {
+                return
+            }
+            e.preventDefault()
             const href  = $this.attr('href')
             if (href) {
                 const offsetY = !APP.Browser.mobile && href === '#about' ? 120 : 0

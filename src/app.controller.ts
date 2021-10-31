@@ -43,6 +43,12 @@ export class AppController {
             link: '#references'
           },
           {
+            name: 'blog',
+            text: 'Blog',
+            link: 'https://blog.julienlagneaux.fr',
+            external: true,
+          },
+          {
             name: 'contact',
             text: 'Contact',
             link: '#contact'
