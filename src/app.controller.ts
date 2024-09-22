@@ -18,8 +18,8 @@ export class AppController {
       siteName: 'Julien Lagneaux',
       page: {
         current: 'home',
-        title: 'Julien Lagneaux - Community Manager',
-        description: 'Julien Lagneaux, community manager freelance basé dans la région de Nantes',
+        title: 'Julien Lagneaux - Social Media Manager',
+        description: 'Julien Lagneaux, social media manager à Nantes',
         keywords: 'Julien Lagneaux,Community Manager,Social Media Manager,Réseaux Sociaux,Freelance,CM Freelance,Nantes,Freelance Nantes,Community Manager Nantes,CM Nantes,Rédaction web',
         nav: [
           {
